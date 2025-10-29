@@ -1,0 +1,33 @@
+
+
+#AboutUs .row .img-vision-aboutus {
+    width: 70%;
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+}
+#AboutUs .row .img-vision-aboutus::before {
+    content: "";
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px dashed #7D7D7D;
+    z-index: -1;
+}
+#AboutUs .row .img-vision-aboutus img {
+    width: 100%;
+}
+
+#AboutUs .imgIcon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-yellow);
+    border-radius: 50%;
+    margin: 20px 0;
+}

@@ -1,0 +1,71 @@
+
+@media (max-width: 991px) {
+    nav .nav-content ul.links,
+    nav .nav-content ul.icons,
+    nav .nav-content .dropdown {
+        display: none;
+    }
+    .show-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 770px) {
+    header .container-banner .banner-text h2 {
+        font-size: 20px;
+    }
+    header .container-banner .banner-text .text {
+        gap: 10px;
+        font-size: 12px;
+    }
+    header .container-banner .banner-text button {
+        padding: 5px 10px;
+    }
+    header .caption {
+        width: fit-content;
+    }
+    header .caption p {
+        font-size: 20px;
+    }
+    header .caption .form input {
+        font-size: 15px;
+    }
+    .main-header-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-header-section ul.links {
+        justify-content: center;
+    }
+
+    section#AboutUs .title {
+        padding-inline: 0;
+        font-size: 12px;
+    }
+    section#OurMembership .box h3 {
+        font-size: 20px;
+    }
+    section#OurMembership .box button {
+        font-size: 10px;
+    }
+    footer .content-footer .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    footer .content-footer .footer-links ul.links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header .container-banner .banner-text {
+        padding: 10px;
+    }
+    header .container-banner .banner-text h2 {
+        font-size: 20px;
+    }
+    header .container-banner .banner-text button {
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,427 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+:root {
+    --color-green: #03A237;
+    --color-yellow: #FFBD04 ;
+    --color-White: #fff;
+    --color-red: #F05A72;
+    --color-gray: #343434;
+    --color-blue: #0577AB;
+    --borderBg: #8080806E;
+}
+
+body {
+    font-family: "Vazirmatn", sans-serif;
+    background-color: #0A0A0A;
+    color: var(--color-White);
+    direction: rtl;
+}
+
+* {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-White);
+    /* transition: 0.3s ease; */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    /* padding: 0; */
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background-color: var(--color-blue);
+    color: var(--color-White);
+    border: none;
+    border-radius: 8px;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+}
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+    transition: all 0.6s;
+}
+button:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-White);
+}
+button:hover::before {
+    left: 100%;
+}
+
+
+
+/*! Main Header Section */
+.main-header-section {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0 50px;
+}
+.main-header-section h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+}
+.main-header-section h2 span {
+    color: var(--color-yellow);
+    font-size: 15px;
+}
+.main-header-section ul.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 15px;
+}
+.main-header-section ul.links li button {
+    border: 1px solid var(--color-yellow);
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--color-White);
+}
+.nav-pills .nav-link.active {
+    background-color: transparent;
+}
+
+/*! Card */
+.card {
+    background-color: #000;
+    color: var(--color-White);
+    transition: all 0.3s ease;
+
+    position: relative;
+    overflow: hidden;
+    transform: perspective(800px) rotateX(0) rotateY(0);
+}
+
+/*
+.card:hover {
+    transform: perspective(800px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+    box-shadow: 0 15px 50px rgba(0, 255, 255, 0.3);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #0040ff, #ff00ff, #ff0000);
+    background-size: 400%;
+    z-index: 1;
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 20px;
+    animation: glowMove 6s linear infinite;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card > * {
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+@keyframes glowMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
+
+
+
+.card .card-title {
+    display: flex;
+    justify-content: space-between;
+}
+.card .card-title .icon {
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.card .card-title .icon:hover {
+    cursor: pointer;
+}
+.card .card-title .icon.active {
+    color: red;
+}
+.card .card-text .activity-type {
+    display: flex;
+    gap: 7px;
+}
+.card .card-text .activity-type p.badge {
+    background-color:  var(--color-gray);
+}
+.card .card-text .activity-type p.badge:first-child {
+    color: var(--color-red);
+}
+.card .card-text .activity-type p.badge:last-child {
+    color: var(--color-green);
+}
+.card .card-info p {
+    font-size: 13px;
+}
+.card .card-info p:nth-child(2) span:last-child {
+    color: var(--color-blue);
+}
+.card .card-footer {
+    border-top: 1px solid var(--color-gray);
+    padding: 12px;
+}
+.card .card-footer button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*! Box */
+.box {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #040403;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.box::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 4px;
+    border-radius: 0 0 30px 30px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-yellow);
+    transition: .5s;
+    z-index: 2;
+}
+.box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: var(--color-White);
+    border-radius: 20px;
+    z-index: 0;
+    transition: top 0.6s ease 0.3s;
+}
+.box:hover::after,
+.box:hover h3 {
+    top: 0;
+    color: var(--color-yellow);
+}
+.box h3,
+.box button {
+    position: relative;
+    z-index: 2;
+    transition: .5s;
+}
+.box h3 {
+    padding: 20px;
+    line-height: 1.5;
+}
+.box button {
+    margin: auto;
+}
+.box:hover::before {
+    width: 100%;
+}
+.box:hover::after {
+    top: 0;
+}
+
+/*! Main Title */
+.main-title {
+    position: relative;
+    padding: 80px 0;
+}
+.main-title button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    margin: auto;
+    background-color: #000;
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+    position: relative;
+    width: 200px;
+    height: 50px;
+}
+.main-title::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-gray);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* ! particlesJS library */
+/* #particles-js {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+} */
+
+
+.particles-box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.particles-box .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background-color: orange;
+    border-radius: 50%;
+    opacity: 0.8;
+    box-shadow:
+    10px 20px 1px 2px orange, 30px 200px 0px 1px orange,
+    50px 500px 0px 2px orange, 70px 100px 0px 1px orange,
+    90px 300px 0px 1px orange, 110px 600px 0px 1px orange,
+    130px 400px 1px 1px orange, 150px 250px 1px 1px orange,
+    170px 150px 1px 1px orange, 190px 700px 1px 1px orange,
+    210px 550px 0px 1px orange, 230px 320px 1px 1px orange,
+    250px 800px 0px 2px orange, 270px 650px 1px 1px orange,
+    290px 200px 1px 0px orange, 310px 100px 0px 2px orange,
+    330px 400px 1px 2px orange, 350px 500px 1px 2px orange,
+    370px 300px 3px 2px orange, 390px 750px 1px 2px orange,
+    410px 620px 1px 2px orange, 430px 280px 1px 0px orange,
+    450px 420px 1px 2px orange, 470px 180px 1px 2px orange,
+    490px 520px 1px 2px orange, 510px 700px 1px 2px orange,
+    530px 250px 1px 2px orange, 550px 360px 1px 2px orange,
+    570px 480px 1px 2px orange, 590px 600px 1px 2px orange,
+    610px 150px 1px 2px orange, 630px 700px 1px 2px orange,
+    650px 340px 1px 2px orange, 670px 200px 1px 2px orange,
+    690px 520px 1px 2px orange, 710px 400px 1px 0px orange,
+    730px 600px 1px 2px orange, 750px 800px 1px 1px orange,
+    770px 100px 1px 2px orange, 790px 300px 1px 2px orange,
+    810px 500px 1px 2px orange, 830px 200px 1px 2px orange,
+    850px 400px 1px 2px orange, 870px 600px 1px 2px orange,
+    890px 700px 1px 2px orange, 910px 500px 1px 2px orange,
+    930px 200px 1px 0px orange, 950px 300px 1px 0px orange,
+    970px 450px 1px 2px orange, 990px 150px 1px 2px orange,
+    1010px 250px 1px 2px orange, 1030px 700px 1px 2px orange,
+    1050px 350px 1px 2px orange, 1070px 500px 1px 2px orange,
+    1090px 650px 1px 2px orange, 1110px 800px 1px 2px orange,
+    1130px 420px 1px 2px orange, 1150px 280px 1px 2px orange,
+    1170px 150px 1px 2px orange, 1190px 320px 1px 0px orange,
+    1210px 480px 1px 0px orange, 1230px 700px 1px 0px orange,
+    1250px 560px 1px 0px orange, 1270px 200px 1px 0px orange,
+    1290px 350px 1px 0px orange, 1310px 100px 1px 0px orange,
+    1330px 400px 1px 0px orange, 1350px 600px 1px 0px orange,
+    1370px 250px 1px 0px orange, 1390px 700px 1px 0px orange,
+    1410px 450px 1px 0px orange, 1430px 800px 1px 0px orange,
+    1450px 550px 1px 2px orange, 1470px 350px 1px 2px orange,
+    1490px 150px 1px 1px orange, 1510px 300px 1px 2px orange,
+    1530px 400px 1px 2px orange, 1550px 600px 1px 0px orange,
+    1570px 200px 1px 2px orange, 1590px 500px 1px 2px orange,
+    1610px 700px 1px 2px orange, 1630px 800px 1px 2px orange,
+    1650px 100px 1px 2px orange, 1670px 250px 1px 2px orange,
+    1690px 350px 1px 0px orange, 1710px 450px 1px 2px orange,
+    1730px 550px 1px 2px orange, 1750px 650px 1px 0px orange,
+    1770px 750px 1px 2px orange, 1790px 850px 1px 2px orange,
+    1810px 300px 1px 2px orange, 1830px 400px 1px 2px orange,
+    1850px 500px 1px 2px orange, 1870px 600px 1px 2px orange,
+    1890px 700px 1px 2px orange, 1910px 800px 1px 2px orange,
+    1930px 200px 1px 2px orange, 1950px 100px 1px 0px orange,
+    1970px 50px 1px 2px orange, 1990px 600px 1px 2px orange,
+    2010px 700px 1px 2px orange, 2030px 300px 1px 2px orange,
+    2050px 400px 1px 2px orange, 2070px 500px 1px 2px orange,
+    2090px 250px 1px 2px orange, 2110px 350px 1px 2px orange,
+    2130px 150px 1px 2px orange, 2150px 700px 1px 2px orange,
+    2170px 650px 1px 2px orange, 2190px 500px 1px 1px orange,
+    2210px 300px 1px 0px orange, 2230px 100px 1px 2px orange,
+    2250px 450px 1px 2px orange, 2270px 200px 1px 0px orange,
+    2290px 600px 1px 1px orange, 2310px 700px 1px 2px orange,
+    2330px 800px 1px 0px orange, 2330px 800px 1px 0px orange;
+
+    animation: floaty 15s ease-in-out infinite alternate;
+}
+
+@keyframes floaty {
+    0% {
+        transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+        opacity: 0.9;
+    }
+    25% {
+        transform: translateY(-30px) translateX(15px) scale(1.2) rotate(10deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(20px) translateX(-10px) scale(0.8) rotate(-15deg);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(-25px) translateX(10px) scale(1.1) rotate(8deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+        opacity: 0.9;
+    }
+}
+
+
+
+
+
+
+/* Roll out (Direction Reveal) */
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ab;
+    border-radius: 5px;
+} */
