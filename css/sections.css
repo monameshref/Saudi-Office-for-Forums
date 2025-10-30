@@ -120,6 +120,7 @@ section#AboutUs  {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 section#AboutUs .main-title {
     padding: 0;

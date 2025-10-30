@@ -4,11 +4,25 @@ $(document).ready(function(){
     $(".owl-carousel.owl-panner").owlCarousel({
         loop:true,
         items:1,
-        autoplay:true,
+        // autoplay:true,
         autoplayTimeout:3000,
         autoplayHoverPause:true,
         dots:true,
         stagePadding: 150,
+        responsive: {
+            320: {
+                items: 1,
+                stagePadding: 20,
+            },
+            800: {
+                items: 1,
+                stagePadding: 70,
+            },
+            1000: {
+                items: 1,
+                stagePadding: 150,
+            }
+        }
     });
 });
 
@@ -32,9 +46,6 @@ closeMenu.addEventListener('click', () => {
 const iconHeartContainer = document.querySelectorAll('.card .card-title .icon');
 const iconsHeart = document.querySelectorAll('.card .card-title .icon i');
 // console.log(iconHeart);
-
-{/* <i class="fa-solid fa-heart"></i> */}
-{/* <i class="fa-regular fa-heart"></i> */}
 
 iconHeartContainer.forEach((container, index) => {
     container.addEventListener("click", () => {
@@ -141,13 +152,12 @@ inputs.forEach((input, index) => {
 // });
 
 //! VanillaTilt.js ====> بيخلى الكارد يتحرك حسب حركة الماوس
-// VanillaTilt.init(document.querySelectorAll(".card"), {
-//     max: 25, // درجة الميل
-//     speed: 400, // سرعة الحركة
-//     glare: true, // اللمعة
-//     "max-glare": 0.4, // شدة اللمعة
-// });
-
+VanillaTilt.init(document.querySelectorAll(".card"), {
+    max: 25, // درجة الميل
+    speed: 400, // سرعة الحركة
+    glare: true, // اللمعة
+    "max-glare": 0.4, // شدة اللمعة
+});
 
 
 

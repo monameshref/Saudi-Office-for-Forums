@@ -23,6 +23,7 @@
     }
     header .caption {
         width: fit-content;
+        padding-inline: 30px;
     }
     header .caption p {
         font-size: 20px;
@@ -67,5 +68,19 @@
     header .container-banner .banner-text button {
         padding: 2px 5px;
         font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .caption {
+        padding: 10px;
+    }
+    header .caption .form input {
+        font-size: 10px;
+    }
+    header .caption .form .icon-search {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
     }
 }
